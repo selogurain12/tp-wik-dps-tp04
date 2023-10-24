@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: echo-service
+  namespace: tp
+spec:
+  selector:
+    app: echo-pod
+  ports:
+    - protocol: TCP
+      port: 8080
+  type: NodePort

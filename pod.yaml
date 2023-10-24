@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: echo-pod
+  namespace: tp
+  labels:
+    app: echo-pod
+spec:
+  containers:
+  - name: echo-container
+    image: registry.cluster.wik.cloud/public/echo
+    ports:
+    - containerPort: 8080
